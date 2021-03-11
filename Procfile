@@ -1,1 +1,1 @@
-web:gunicorn --workers=2 --chdir app app:app
+web:gunicorn = gunicorn -w 3 app app:app
