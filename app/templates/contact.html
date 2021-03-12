@@ -1,4 +1,7 @@
-{% extends "index.html" %}
+
+{% block footer  %}
+    {{super()}}
+{% endblock %}{% extends "index.html" %}
 
 {% block head %}
     {{ super() }}
@@ -6,4 +9,8 @@
 
 {% block sidebar %}
     {{ super() }}
+{% endblock %}
+
+{% block footer  %}
+    {{super()}}
 {% endblock %}

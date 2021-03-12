@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W.S. Home</title>
-    <link rel="stylesheet" href="{{url_for('static', filename='css/home.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/index.css')}}">
     {% endblock %}
 </head>
 <body>
@@ -17,8 +17,18 @@
         <a href="{{url_for('proj.projects')}}">Projects</a>
         <a href="{{url_for('art.articles')}}">Articles</a>
         <a href="{{url_for('cont.contact')}}">Contact</a>
-        <a href="{{url_for('about.about')}}">About</a>
+        <a href="{{url_for('bio.bio')}}">Bio</a>
       </div>
     {% endblock %}
+    {% block content %}
+    {% endblock %}
 </body>
+
+{% block footer  %}
+    <footer>
+        <div id="footer-container">
+            <p>Author: Mattia Zingaretti</p>
+        </div>
+    </footer>
+{% endblock %}
 </html>

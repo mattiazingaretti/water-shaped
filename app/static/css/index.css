@@ -32,3 +32,13 @@ body{
     background-color: #4CAF50;
     color: white;
   }
+
+
+
+
+  footer #footer-container{
+    width: 100%;
+    background-color: lightblue;
+    position: fixed;
+    bottom: 0;
+  }
