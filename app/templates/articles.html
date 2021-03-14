@@ -1,13 +1,331 @@
 {% extends "index.html" %}
 
 {% block head %}
-    {{ super() }}
+{{ super() }}
+
+{% block customstyle %}
+<style>
+    .list-group-item {}
+
+    img {
+        max-width: 275px;
+    }
+
+    .pagetitle {
+        border-bottom: 1px solid #cccccc;
+        padding-bottom: 30px;
+        margin-bottom: 30px;
+    }
+</style>
 {% endblock %}
+
+{% endblock %}
+
 
 {% block navbar %}
-    {{ super() }}
+{{ super() }}
 {% endblock %}
 
+{% block content %}
+
+<div class="row-fluid top30 pagetitle">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-12">
+            <h1 style="margin-top: 30px;">Training</h1>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+
+
+
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-primary rounded-end" type="button" id="button-addon2">Go</button>
+              </div>
+
+            <div id="demo" class="">
+                <hr>
+
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <input class="form-check-input me-1 " type="checkbox" value="" aria-label="...">
+                        Python
+                        <span class="badge bg-primary rounded-pill ">14</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                        AI
+                        <span class="badge bg-primary rounded-pill">2</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        <input class="form-check-input me-1" type="checkbox" value="" aria-label="...">
+                        Math
+                        <span class="badge bg-primary rounded-pill">1</span>
+                    </li>
+                </ul>
+
+
+
+
+
+
+             
+            </div>
+
+
+
+
+        </div>
+        <div class="col-md-9">
+
+
+            <div class="well hidden-xs">
+
+                <div class="row">
+
+                    <div class="col-xs-4">
+
+
+                        <select class="form-control">
+                            <option>Featured</option>
+                            <option>Recently Added</option>
+                            <option>Next Upcoming Session</option>
+                            <option>A-Z</option>
+                            <option>Z-A</option>
+                        </select>
+                    </div>
+                    <div class="col-xs-8">
+                        <div class="btn-group pull-right">
+                            <button type="button" class="btn btn-default"><span
+                                    class="glyphicon glyphicon-th"></span></button>
+                            <button type="button" class="btn btn-default active"><span
+                                    class="glyphicon glyphicon-th-list"></span></button>
+                            <button type="button" class="btn btn-default"><span
+                                    class="glyphicon glyphicon-list"></span></button>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+            </div>
+
+            <hr>
+
+
+            <div class="row">
+                <div class="col-sm-4"><a href="#" class=""><img src="http://placehold.it/1280X720"
+                            class="img-responsive"></a>
+                </div>
+                <div class="col-sm-8">
+                    <h3 class="title">How to Fight Fraud with Artificial Intelligence and Intelligent Analytics</h3>
+                    <p class="text-muted"><span class="glyphicon glyphicon-lock"></span> Available Exclusively for
+                        Premium Members</p>
+                    <p>Could artificial intelligence have been used to prevent the high-profile Target breach? The
+                        concept is not so far-fetched. Organizations such as Mastercard and RBS WorldPay have long
+                        relied on artificial intelligence to detect fraudulent transaction patterns and prevent card.
+                    </p>
+
+                    <p class="text-muted">Presented by <a href="#">Ellen Richey</a></p>
+
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-4"><a href="#" class=""><img src="http://placehold.it/1280X720"
+                            class="img-responsive"></a>
+                </div>
+                <div class="col-sm-8">
+                    <h3 class="title">Big Payment Data: Leveraging Transactional Data to Ensure an Enterprise Approach
+                        to Risk Management</h3>
+                    <p class="text-muted"><span class="glyphicon glyphicon-calendar"></span> July 23, 2014 @ 1:30 PM</p>
+                    <p>60% of organizations were exposed to actual or attempted fraud loss last year. As fraud and risk
+                        increases year over year, the amount of data being collected increases as well.
+                    </p>
+                    <p class="text-muted">Presented by <a href="#">Mike Braatz</a>, <a href="#">Jonathan Eber</a></p>
+
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-4"><a href="#" class=""><img src="http://placehold.it/1280X720"
+                            class="img-responsive"></a>
+                </div>
+                <div class="col-sm-8">
+                    <h3 class="title">How to Fight Fraud with Artificial Intelligence and Intelligent Analytics</h3>
+                    <p class="text-muted"><span class="glyphicon glyphicon-lock"></span> Available Exclusively for
+                        Premium Members</p>
+                    <p>Could artificial intelligence have been used to prevent the high-profile Target breach? The
+                        concept is not so far-fetched. Organizations such as Mastercard and RBS WorldPay have long
+                        relied on artificial intelligence to detect fraudulent transaction patterns and prevent card.
+                    </p>
+
+                    <p class="text-muted">Presented by <a href="#">Ellen Richey</a></p>
+
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-4"><a href="#" class=""><img src="http://placehold.it/1280X720"
+                            class="img-responsive"></a>
+                </div>
+                <div class="col-sm-8">
+                    <h3 class="title">Big Payment Data: Leveraging Transactional Data to Ensure an Enterprise Approach
+                        to Risk Management</h3>
+                    <p class="text-muted"><span class="glyphicon glyphicon-calendar"></span> July 23, 2014 @ 1:30 PM</p>
+                    <p>60% of organizations were exposed to actual or attempted fraud loss last year. As fraud and risk
+                        increases year over year, the amount of data being collected increases as well.
+                    </p>
+                    <p class="text-muted">Presented by <a href="#">Mike Braatz</a>, <a href="#">Jonathan Eber</a></p>
+
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-4"><a href="#" class=""><img src="http://placehold.it/1280X720"
+                            class="img-responsive"></a>
+                </div>
+                <div class="col-sm-8">
+                    <h3 class="title">How to Fight Fraud with Artificial Intelligence and Intelligent Analytics</h3>
+                    <p class="text-muted"><span class="glyphicon glyphicon-lock"></span> Available Exclusively for
+                        Premium Members</p>
+                    <p>Could artificial intelligence have been used to prevent the high-profile Target breach? The
+                        concept is not so far-fetched. Organizations such as Mastercard and RBS WorldPay have long
+                        relied on artificial intelligence to detect fraudulent transaction patterns and prevent card.
+                    </p>
+
+                    <p class="text-muted">Presented by <a href="#">Ellen Richey</a></p>
+
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-4"><a href="#" class=""><img src="http://placehold.it/1280X720"
+                            class="img-responsive"></a>
+                </div>
+                <div class="col-sm-8">
+                    <h3 class="title">Big Payment Data: Leveraging Transactional Data to Ensure an Enterprise Approach
+                        to Risk Management</h3>
+                    <p class="text-muted"><span class="glyphicon glyphicon-calendar"></span> July 23, 2014 @ 1:30 PM</p>
+                    <p>60% of organizations were exposed to actual or attempted fraud loss last year. As fraud and risk
+                        increases year over year, the amount of data being collected increases as well.
+                    </p>
+                    <p class="text-muted">Presented by <a href="#">Mike Braatz</a>, <a href="#">Jonathan Eber</a></p>
+
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-4"><a href="#" class=""><img src="http://placehold.it/1280X720"
+                            class="img-responsive"></a>
+                </div>
+                <div class="col-sm-8">
+                    <h3 class="title">How to Fight Fraud with Artificial Intelligence and Intelligent Analytics</h3>
+                    <p class="text-muted"><span class="glyphicon glyphicon-lock"></span> Available Exclusively for
+                        Premium Members</p>
+                    <p>Could artificial intelligence have been used to prevent the high-profile Target breach? The
+                        concept is not so far-fetched. Organizations such as Mastercard and RBS WorldPay have long
+                        relied on artificial intelligence to detect fraudulent transaction patterns and prevent card.
+                    </p>
+
+                    <p class="text-muted">Presented by <a href="#">Ellen Richey</a></p>
+
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-4"><a href="#" class=""><img src="http://placehold.it/1280X720"
+                            class="img-responsive"></a>
+                </div>
+                <div class="col-sm-8">
+                    <h3 class="title">Big Payment Data: Leveraging Transactional Data to Ensure an Enterprise Approach
+                        to Risk Management</h3>
+                    <p class="text-muted"><span class="glyphicon glyphicon-calendar"></span> July 23, 2014 @ 1:30 PM</p>
+                    <p>60% of organizations were exposed to actual or attempted fraud loss last year. As fraud and risk
+                        increases year over year, the amount of data being collected increases as well.
+                    </p>
+                    <p class="text-muted">Presented by <a href="#">Mike Braatz</a>, <a href="#">Jonathan Eber</a></p>
+
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-4"><a href="#" class=""><img src="http://placehold.it/1280X720"
+                            class="img-responsive"></a>
+                </div>
+                <div class="col-sm-8">
+                    <h3 class="title">How to Fight Fraud with Artificial Intelligence and Intelligent Analytics</h3>
+                    <p class="text-muted"><span class="glyphicon glyphicon-lock"></span> Available Exclusively for
+                        Premium Members</p>
+                    <p>Could artificial intelligence have been used to prevent the high-profile Target breach? The
+                        concept is not so far-fetched. Organizations such as Mastercard and RBS WorldPay have long
+                        relied on artificial intelligence to detect fraudulent transaction patterns and prevent card.
+                    </p>
+
+                    <p class="text-muted">Presented by <a href="#">Ellen Richey</a></p>
+
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-4"><a href="#" class=""><img src="http://placehold.it/1280X720"
+                            class="img-responsive"></a>
+                </div>
+                <div class="col-sm-8">
+                    <h3 class="title">Big Payment Data: Leveraging Transactional Data to Ensure an Enterprise Approach
+                        to Risk Management</h3>
+                    <p class="text-muted"><span class="glyphicon glyphicon-calendar"></span> July 23, 2014 @ 1:30 PM</p>
+                    <p>60% of organizations were exposed to actual or attempted fraud loss last year. As fraud and risk
+                        increases year over year, the amount of data being collected increases as well.
+                    </p>
+                    <p class="text-muted">Presented by <a href="#">Mike Braatz</a>, <a href="#">Jonathan Eber</a></p>
+
+                </div>
+            </div>
+            <hr>
+
+
+
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-end">
+                  <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                  </li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                  </li>
+                </ul>
+              </nav>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}
 {% block footer  %}
-    {{super()}}
+{{super()}}
 {% endblock %}
