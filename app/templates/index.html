@@ -10,7 +10,10 @@
     {% block title %}
     <title>W.S. Home</title>
     {% endblock %}
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+    <link rel="canonical" href="https://water-shaped.herokuapp.com/">
+
+    <!-- Two.js lib -->
+    <script src="{{url_for('static' ,filename='two/two.min.js')}}"></script>
 
     
 
@@ -37,7 +40,8 @@
       }
     </style>
     {% endblock %}
-    
+
+  
     <!-- Custom styles for this template -->
     <link href="{{url_for('static' ,filename='css/style.css')}}" rel="stylesheet">
   </head>
@@ -91,7 +95,8 @@
   </footer>
 
 </main>
-
+{% block scripts %}
+{% endblock %}
       
   </body>
 </html>
