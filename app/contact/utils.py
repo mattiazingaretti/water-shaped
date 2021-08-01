@@ -13,8 +13,7 @@ def setMessage(sender, subject, message):
     return message
 
 def sendEmail(message):
-    context = ssl.create_default_context()
-    with smtplib.SMTP_SSL(SMTP_SERVER, SSL_PORT, context=context) as server:
+    with smtplib.SMTP(SMTP_SERVER) as server:
         server.login(SENDER_EMAIL, SENDER_EMAIL_PSW)
         server.sendmail(SENDER_EMAIL, RECEIVER_EMAIL, message)
     
