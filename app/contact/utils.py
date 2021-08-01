@@ -2,6 +2,7 @@ import smtplib, ssl, os
 from app.config import SSL_PORT,SMTP_SERVER,SENDER_EMAIL,RECEIVER_EMAIL,SENDER_EMAIL_PSW
 
 #Test funct
+#TODO: update env var on DEV machine
 def setMessage(sender, subject, message):
     message ="""Subject: [WS] Someone wants to talk to you.
     Who ? : {0} \n  What he\she wants ? : {1} \n
