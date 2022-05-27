@@ -39,25 +39,24 @@ def setMessage(sender, subject, message):
     
     return msg
 
+
 def sendEmail(message):
     status = -1  #We're pessimistic
     context = ssl.create_default_context()
     # Try to log in to server and send email
+    
     try:
-        server = smtplib.SMTP(SMTP_SERVER, SSL_PORT)
-        server.ehlo()  # check connection
-        server.starttls(context=context)  # Secure the connection
-        server.ehlo()  # check connection
-        server.login(SENDER_EMAIL, SENDER_EMAIL_PSW)
-
-        # Send email here
-        ret = server.sendmail(SENDER_EMAIL, RECEIVER_EMAIL, message.as_string())
-        status = -1 if len(ret) > 0 else 0 #-1 mail sent with errors 0 otherwhise
-        
+        with smtplib.SMTP(SMTP_SERVER, SSL_PORT) as server:
+            server.ehlo()  # check connection
+            server.starttls(context=context)  # Secure the connection
+            server.ehlo()  # check connection
+            server.login(SENDER_EMAIL, SENDER_EMAIL_PSW)
+            
+            #send email      
+            ret = server.sendmail(SENDER_EMAIL, RECEIVER_EMAIL, message.as_string())
+            status = -1 if len(ret) > 0 else 0 #-1 mail sent with errors 0 otherwhise
     except Exception as e:
-        # Print any error messages to stdout
         print(e)
-    finally:
-        server.quit()
-        return status
 
+    return status     
+    

@@ -5,7 +5,6 @@ contBp = Blueprint("cont", __name__)
 
 @contBp.route('/contact', methods=['GET','GET'])
 def contact():
-
     return render_template('contact.html')
 
 
