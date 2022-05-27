@@ -1,5 +1,5 @@
 from flask import Blueprint,render_template, jsonify, request, redirect,url_for , flash
-from app.contact.utils import  setMessage, sendEmail
+from app.contact.utils import   setMessage, sendEmail
 
 contBp = Blueprint("cont", __name__)
 
@@ -19,8 +19,11 @@ def sendMsg():
         msg = request.form.get("msg")
         if f_name and l_name and subject and msg:
             msg = setMessage(str(f_name +" "+ l_name) , str(subject), str(msg))
-            sendEmail(msg)
-            flash("Message sent successfully ! ",'success')
+            status = sendEmail(msg)
+            if status == 0:
+                flash("Message sent successfully ! ",'success')
+            else:
+                flash("Message not sent, service unavailable ",'error')
         return redirect(url_for('cont.contact'))
     else:
         flash("Error while sending message",'error')
