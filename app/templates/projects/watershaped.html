@@ -1,1 +1,8 @@
-{% extends "index.html" %}
+<!-- PROJECT CONTENT AND PROJECT MODAL -->
+
+{% from "projects/modalProjects.html" import renderModal with context %}
+
+{% call renderModal('idModal', 'idLabel') %}
+<!-- Insert test of the project -->
+This should be a fancy description of the project.
+{% endcall %}
