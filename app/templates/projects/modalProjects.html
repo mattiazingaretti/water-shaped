@@ -1,7 +1,7 @@
 <!-- Create macro for all the projects in project section.-->
 
 
-{% macro renderModal(idModal, idLabel) -%}
+{% macro renderModal(idModal, idLabel, modalTitle) -%}
 
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="modal"
@@ -14,7 +14,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="{{idLabel}}">Modal title</h5>
+        <h5 class="modal-title" id="{{idLabel}}">{{modalTitle}}</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">

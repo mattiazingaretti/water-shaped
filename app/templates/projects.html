@@ -10,7 +10,7 @@
 
 {{ super() }}
 {% block customstyle %}
-<style>
+<!--<style>
     .bd-placeholder-img {
         font-size: 1.125rem;
         text-anchor: middle;
@@ -31,6 +31,7 @@
         }
     }
 </style>
+-->
 {% endblock %}
 {% endblock %}
 
@@ -52,18 +53,19 @@
 </section>
 
 <div class="album py-5 bg-light">
-    
+
     <div class="container">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-            <div class="col">
-                <div class="card shadow-sm">
-                    <img src="{{url_for('static' , filename='imgs/bg.jpg')}}" />
+        <div class="row ">
+            <div class="col-sm-6 d-flex align-items-center" >
+                <div class="card shadow-sm" style="width: 18rem; height: 23rem;">
+                    <img src="{{url_for('static' , filename='imgs/wshapeProjBG.jpg')}}" />
+
                     <div class="card-body">
+                        <h5 class="card title" style="border:0;">Water Shaped</h5>
                         <p class="card-text">My "Hello World!" in the web-dev field,
                             just a simple and fluid portfolio.</p>
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="btn-group">
-                                <!--<a href="{{url_for('proj.watershaped')}}"><button type="button" class="btn btn-sm btn-outline-secondary" >View</button></a>-->
                                 {% include "projects/watershaped.html" %}
                             </div>
                             <small class="text-muted">2 mins</small>
@@ -71,6 +73,26 @@
                     </div>
                 </div>
             </div>
+            <div class="col-sm-6 d-flex ">
+                <div class="card  shadow-sm" style="width: 18rem;">
+
+                    <img class="card-img" style="margin:auto;max-width:77%;"src="{{url_for('static' , filename='imgs/AI.png')}}" />
+
+                    <div class="card-body align-items-left">
+                        <h5 class="card title" style="border:0;">Thesis Project</h5>
+                        <p class="card-text">This should be a description of my thesis project.
+                          
+                        </p>
+                        <div class="d-flex justify-content-between ">
+                            <div class="btn-group">
+                                {% include "projects/thesisProject.html" %}
+                            </div>
+                            <small class="text-muted">4 mins</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
